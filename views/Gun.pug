@@ -7,9 +7,15 @@ block content
   div(class="container-fluid mt-3")
     div(class="row")
         each gun,index in Gun
-              div(class="col-sm-2") 
+            div(class="col-sm-2" onclick=`buy(${index})`) 
                 p Barrel_metal is #{gun.Barrel_metal}
                 p Gun_Model is #{gun.Gun_Model} 
                 p Gun_Serial_Number is #{gun.Gun_Serial_Number}
+
+  script.     
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      }
 
 
